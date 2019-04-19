@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+  head
+    
+  body
+    html
+      head
+        meta(http-equiv='Content-Type', content='text/html; charset=windows-1252')
+        link(rel='stylesheet', type='text/css', href='/stylesheets/Style1.css')
+      body
+        .container
+          .box
+          .container-forms
+            .container-info
+              .info-item
+                .table
+                  .table-cell
+                    p
+                      | Have an account?
+                    .btn
+                      | Log in
+              .info-item
+                .table
+                  .table-cell
+                    p
+                      | Don't have an account?
+                    .btn
+                      | Sign up
+            .container-form
+              .form-item.log-in
+                .table
+                  .table-cell
+                        form(method='post',action='/users/login')
+                            input(name='username', placeholder='Username', type='text')
+                            input(name='password', placeholder='Password', type='Password')
+                            input.btn(name='submit',type='submit',value='Login')
+              .form-item.sign-up
+                .table
+                  .table-cell
+                        form(method='post',action='/users/register')
+                            input(name='email', placeholder='Email', type='text')
+                            input(name='name', placeholder='Full Name', type='text')
+                            input(name='username', placeholder='Username', type='text')
+                            input(name='password', placeholder='Password', type='Password')
+                            input(name='password2', placeholder='Confirm Password', type='Password')
+                            input.btn.btn-default(name='submit',type='submit',value='Register')
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+        script(type='text/javascript', src='/javascripts/index.js')
